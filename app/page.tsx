@@ -1,112 +1,175 @@
+"use client";
+
 import Link from "next/link";
-import { CheckCircle2, TrendingUp, Users } from "lucide-react";
+import { motion } from "framer-motion";
+import { ArrowRight, BarChart3, Layout, Zap, CheckCircle2 } from "lucide-react";
 import Button from "@/components/ui/Button";
 import SectionWrapper from "@/components/ui/SectionWrapper";
 
-export const metadata = {
-  title: "Fractional CMO & Strategic Marketing Advisory",
-  description:
-    "Drive sustainable growth with expert fractional CMO services. Matt Aster helps companies scale through strategic marketing leadership.",
+const fadeInUp = {
+  initial: { opacity: 0, y: 20 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true },
+  transition: { duration: 0.5 },
+};
+
+const staggerContainer = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
 };
 
 export default function Home() {
-  const personSchema = {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    name: "Matt Aster",
-    jobTitle: "Fractional CMO",
-    url: "https://mattaster.github.io",
-    sameAs: ["https://linkedin.com/in/mattaster"],
-  };
-
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
-      />
-
       {/* Hero Section */}
-      <section className="relative bg-navy-900 text-white overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]" />
-        <div className="relative mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8 lg:py-40">
-          <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl">
-            <div className="hidden sm:mb-10 sm:flex">
-              <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-slate-300 ring-1 ring-white/10 hover:ring-white/20">
-                Accepting new advisory clients for Q4 2025.{" "}
-                <Link href="/contact" className="font-semibold text-white">
-                  <span className="absolute inset-0" aria-hidden="true" />
-                  Get in touch <span aria-hidden="true">&rarr;</span>
-                </Link>
-              </div>
-            </div>
-            <h1 className="text-4xl font-serif font-bold tracking-tight text-white sm:text-6xl">
-              Strategic Marketing Leadership for Growth-Stage Companies
+      <section className="relative min-h-[90vh] flex items-center justify-center bg-gradient-to-br from-slate-900 via-navy-900 to-slate-900 overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center opacity-20 [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-7xl pointer-events-none">
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl" />
+          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl" />
+        </div>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-6 py-24 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="space-y-8"
+          >
+            <h1 className="text-5xl md:text-7xl font-serif font-bold text-white tracking-tight leading-tight">
+              Bridge the Gap Between <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-indigo-200">
+                Vision and Execution.
+              </span>
             </h1>
-            <p className="mt-6 text-lg leading-8 text-slate-300">
-              I help B2B and B2C companies scale revenue, optimize marketing operations, and build high-performance teams as a Fractional CMO and Strategic Advisor.
+
+            <p className="max-w-2xl mx-auto text-xl text-slate-300 leading-relaxed">
+              Fractional CMO and Strategic Advisory for companies ready to scale, but lacking the leadership to get there.
             </p>
-            <div className="mt-10 flex items-center gap-x-6">
-              <Button href="/contact" size="lg">
+
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+              <Button href="/contact" size="lg" className="w-full sm:w-auto shadow-lg shadow-blue-900/20">
                 Book a Consultation
               </Button>
-              <Link href="/expertise" className="text-sm font-semibold leading-6 text-white">
-                View Expertise <span aria-hidden="true">→</span>
-              </Link>
+              <Button
+                href="/expertise"
+                variant="outline"
+                size="lg"
+                className="w-full sm:w-auto border-slate-700 text-slate-300 hover:bg-slate-800 hover:text-white hover:border-slate-600"
+              >
+                View Expertise
+              </Button>
             </div>
-          </div>
+          </motion.div>
+
+          {/* Glassmorphism Card CTA / Social Proof Teaser */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4, duration: 0.8 }}
+            className="mt-20 mx-auto max-w-4xl"
+          >
+            <div className="backdrop-blur-md bg-white/5 border border-white/10 rounded-2xl p-8 md:p-10 shadow-2xl">
+              <p className="text-slate-400 text-sm uppercase tracking-wider font-semibold mb-6">
+                Trusted by leadership teams at
+              </p>
+              <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
+                {/* Placeholders for Logos */}
+                <span className="text-xl font-bold text-white">[TechCorp]</span>
+                <span className="text-xl font-bold text-white">[FinStart]</span>
+                <span className="text-xl font-bold text-white">[GrowthIO]</span>
+                <span className="text-xl font-bold text-white">[ScaleUp]</span>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 
-      {/* Value Proposition */}
-      <SectionWrapper>
-        <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-base font-semibold leading-7 text-navy-700">Why Partner with a Fractional CMO?</h2>
-          <p className="mt-2 text-3xl font-serif font-bold tracking-tight text-navy-900 sm:text-4xl">
-            Executive Expertise, Flexible Engagement
+      {/* Problem/Agitation Section */}
+      <SectionWrapper className="bg-white">
+        <motion.div
+          variants={fadeInUp}
+          initial="initial"
+          whileInView="whileInView"
+          viewport={{ once: true }}
+          className="max-w-3xl mx-auto text-center space-y-6"
+        >
+          <h2 className="text-3xl md:text-4xl font-serif font-bold text-navy-900">
+            You have a product. You have sales. <br />
+            <span className="text-slate-500">But your marketing engine is sputtering.</span>
+          </h2>
+          <p className="text-lg text-slate-600 leading-relaxed">
+            Growth has stalled. Your team is reactive, not proactive. You're spending money on ads, agencies, and tools, but you can't see the ROI. You don't need another "hacker"—you need a strategist who can own the number.
           </p>
-          <p className="mt-6 text-lg leading-8 text-slate-600">
-            Get the strategic vision and leadership of a seasoned CMO without the full-time headcount cost. I bridge the gap between strategy and execution.
-          </p>
-        </div>
-        <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
-          <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
-            <div className="flex flex-col">
-              <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-navy-900">
-                <TrendingUp className="h-5 w-5 flex-none text-navy-600" aria-hidden="true" />
-                Revenue Growth
-              </dt>
-              <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-slate-600">
-                <p className="flex-auto">
-                  Align marketing strategies with business goals to drive measurable revenue growth and ROI.
-                </p>
-              </dd>
-            </div>
-            <div className="flex flex-col">
-              <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-navy-900">
-                <Users className="h-5 w-5 flex-none text-navy-600" aria-hidden="true" />
-                Team Leadership
-              </dt>
-              <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-slate-600">
-                <p className="flex-auto">
-                  Mentor and manage your existing marketing team, or help you build one from scratch.
-                </p>
-              </dd>
-            </div>
-            <div className="flex flex-col">
-              <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-navy-900">
-                <CheckCircle2 className="h-5 w-5 flex-none text-navy-600" aria-hidden="true" />
-                Operational Efficiency
-              </dt>
-              <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-slate-600">
-                <p className="flex-auto">
-                  Streamline processes, select the right martech stack, and eliminate wasted spend.
-                </p>
-              </dd>
-            </div>
-          </dl>
-        </div>
+        </motion.div>
       </SectionWrapper>
+
+      {/* Methodology Teaser */}
+      <section className="py-24 bg-slate-50">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-navy-900 mb-4">
+              The MAster Methodology
+            </h2>
+            <p className="text-slate-600 max-w-2xl mx-auto">
+              A proven framework to diagnose, prescribe, and execute.
+            </p>
+          </div>
+
+          <motion.div
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            className="grid md:grid-cols-3 gap-8"
+          >
+            {[
+              {
+                icon: BarChart3,
+                title: "1. Audit",
+                desc: "Deep dive into your data, team, and tech stack to identify bottlenecks.",
+              },
+              {
+                icon: Layout,
+                title: "2. Strategy",
+                desc: "Building the roadmap, positioning, and go-to-market plan for scalable growth.",
+              },
+              {
+                icon: Zap,
+                title: "3. Execution",
+                desc: "Leading the charge, managing the team, and optimizing for peak performance.",
+              },
+            ].map((item, idx) => (
+              <motion.div
+                key={idx}
+                variants={fadeInUp}
+                className="bg-white p-8 rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow"
+              >
+                <div className="w-12 h-12 bg-navy-50 rounded-lg flex items-center justify-center mb-6 text-navy-900">
+                  <item.icon size={24} />
+                </div>
+                <h3 className="text-xl font-bold text-navy-900 mb-3">{item.title}</h3>
+                <p className="text-slate-600">{item.desc}</p>
+              </motion.div>
+            ))}
+          </motion.div>
+
+          <div className="mt-16 text-center">
+            <Link
+              href="/expertise"
+              className="inline-flex items-center text-navy-900 font-semibold hover:text-blue-700 transition-colors"
+            >
+              Explore My Services <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </div>
+        </div>
+      </section>
     </>
   );
 }
