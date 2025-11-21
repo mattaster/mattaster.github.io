@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import Button from "@/components/ui/Button";
 
@@ -20,8 +21,16 @@ export default function Header() {
                 aria-label="Global"
             >
                 <div className="flex lg:flex-1">
-                    <Link href="/" className="-m-1.5 p-1.5 font-serif text-2xl font-bold text-navy-900">
-                        MAster <span className="font-sans text-base font-normal text-slate-600">Marketing & Strategy</span>
+                    <Link href="/" className="-m-1.5 p-1.5">
+                        <span className="sr-only">MAster Marketing & Strategy</span>
+                        <Image
+                            src="/logo.png"
+                            alt="MAster Marketing & Strategy"
+                            width={200}
+                            height={60}
+                            className="h-16 w-auto"
+                            priority
+                        />
                     </Link>
                 </div>
                 <div className="flex lg:hidden">
@@ -57,8 +66,15 @@ export default function Header() {
                     <div className="fixed inset-0 z-50" />
                     <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-slate-900/10">
                         <div className="flex items-center justify-between">
-                            <Link href="/" className="-m-1.5 p-1.5 font-serif text-xl font-bold text-navy-900">
-                                MAster
+                            <Link href="/" className="-m-1.5 p-1.5">
+                                <span className="sr-only">MAster Marketing & Strategy</span>
+                                <Image
+                                    src="/logo.png"
+                                    alt="MAster Marketing & Strategy"
+                                    width={150}
+                                    height={45}
+                                    className="h-12 w-auto"
+                                />
                             </Link>
                             <button
                                 type="button"
