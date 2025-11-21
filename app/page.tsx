@@ -1,6 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, CheckCircle2, TrendingUp, Users } from "lucide-react";
+import { CheckCircle2, TrendingUp, Users } from "lucide-react";
 import Button from "@/components/ui/Button";
 import SectionWrapper from "@/components/ui/SectionWrapper";
 

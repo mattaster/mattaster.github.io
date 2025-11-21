@@ -1,0 +1,39 @@
+
+> temp_app@0.1.0 build
+> next build
+
+ ⚠ `eslint` configuration in next.config.mjs is no longer supported. See more info here: https://nextjs.org/docs/app/api-reference/cli/next#next-lint-options
+ ⚠ Invalid next.config.mjs options detected: 
+ ⚠     Unrecognized key(s) in object: 'eslint'
+ ⚠ See more info here: https://nextjs.org/docs/messages/invalid-next-config
+   ▲ Next.js 16.0.3 (Turbopack)
+
+   Creating an optimized production build ...
+
+> Build error occurred
+Error: Turbopack build failed with 1 errors:
+./app/globals.css
+Error evaluating Node.js code
+Error: Cannot find module '@tailwindcss/postcss'
+Require stack:
+- C:\Users\matta\.gemini\antigravity\scratch\github_pages_mattaster\mattaster.github.io\.next\build\chunks\[root-of-the-server]__51225daf._.js
+- C:\Users\matta\.gemini\antigravity\scratch\github_pages_mattaster\mattaster.github.io\.next\build\chunks\[turbopack]_runtime.js
+- C:\Users\matta\.gemini\antigravity\scratch\github_pages_mattaster\mattaster.github.io\.next\build\postcss.js
+    [at Module._resolveFilename (node:internal/modules/cjs/loader:1145:15)]
+    [at Module._load (node:internal/modules/cjs/loader:986:27)]
+    [at Module.require (node:internal/modules/cjs/loader:1233:19)]
+    [at require (node:internal/modules/helpers:179:18)]
+    at turbopack:///[turbopack-node]/transforms/postcss.ts:49:25 [C:\Users\matta\.gemini\antigravity\scratch\github_pages_mattaster\mattaster.github.io\.next\build\chunks\[root-of-the-server]__51225daf._.js:134:33]
+    [at <anonymous>]
+    at Module.init (turbopack:///[turbopack-node]/transforms/postcss.ts:43:33) [C:\Users\matta\.gemini\antigravity\scratch\github_pages_mattaster\mattaster.github.io\.next\build\chunks\[root-of-the-server]__51225daf._.js:129:35]
+    at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:77:20) [C:\Users\matta\.gemini\antigravity\scratch\github_pages_mattaster\mattaster.github.io\.next\build\chunks\[root-of-the-server]__974941ed._.js:429:26]
+    [at process.processTicksAndRejections (node:internal/process/task_queues:95:5)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component]
+
+
+    at Module.init (turbopack:///[turbopack-node]/transforms/postcss.ts:43:33) [C:\Users\matta\.gemini\antigravity\scratch\github_pages_mattaster\mattaster.github.io\.next\build\chunks\[root-of-the-server]__51225daf._.js:129:35])
+    at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:77:20) [C:\Users\matta\.gemini\antigravity\scratch\github_pages_mattaster\mattaster.github.io\.next\build\chunks\[root-of-the-server]__974941ed._.js:429:26])

@@ -1,0 +1,35 @@
+
+C:\Users\matta\.gemini\antigravity\scratch\github_pages_mattaster\mattaster.github.io\app\about\page.tsx
+   1:8    warning  'SectionWrapper' is defined but never used                       @typescript-eslint/no-unused-vars
+  25:207  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\matta\.gemini\antigravity\scratch\github_pages_mattaster\mattaster.github.io\app\contact\page.tsx
+  21:74   error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  34:116  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\matta\.gemini\antigravity\scratch\github_pages_mattaster\mattaster.github.io\app\expertise\page.tsx
+  84:80  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\matta\.gemini\antigravity\scratch\github_pages_mattaster\mattaster.github.io\components\seo\JsonLd.tsx
+  10:9  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\matta\.gemini\antigravity\scratch\github_pages_mattaster\mattaster.github.io\components\seo\JsonLd.tsx:10:9
+   8 |
+   9 |     useEffect(() => {
+> 10 |         setMounted(true);
+     |         ^^^^^^^^^^ Avoid calling setState() directly within an effect
+  11 |     }, []);
+  12 |
+  13 |     if (!mounted) return null;  react-hooks/set-state-in-effect
+
+C:\Users\matta\.gemini\antigravity\scratch\github_pages_mattaster\mattaster.github.io\tailwind.config.ts
+  38:13  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+
+✖ 7 problems (6 errors, 1 warning)
+

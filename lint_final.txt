@@ -1,0 +1,9 @@
+
+C:\Users\matta\.gemini\antigravity\scratch\github_pages_mattaster\mattaster.github.io\app\about\page.tsx
+  1:8  warning  'SectionWrapper' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\matta\.gemini\antigravity\scratch\github_pages_mattaster\mattaster.github.io\tailwind.config.ts
+  38:13  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+
+✖ 2 problems (1 error, 1 warning)
+

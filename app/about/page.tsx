@@ -1,5 +1,5 @@
 import SectionWrapper from "@/components/ui/SectionWrapper";
-import Image from "next/image";
+
 
 export const metadata = {
     title: "About Matt Aster",
@@ -22,7 +22,7 @@ export default function About() {
                                     I founded MAster Marketing and Strategy with a simple mission: to provide high-growth companies with the executive marketing leadership they need, without the overhead of a full-time C-suite hire.
                                 </p>
                                 <p className="mt-8">
-                                    With over a decade of experience leading marketing teams in B2B SaaS and tech-enabled services, I bring a data-driven, revenue-focused approach to every engagement. I don't just advise; I help you build the systems and teams that drive sustainable growth.
+                                    With over a decade of experience leading marketing teams in B2B SaaS and tech-enabled services, I bring a data-driven, revenue-focused approach to every engagement. I don&apos;t just advise; I help you build the systems and teams that drive sustainable growth.
                                 </p>
                             </div>
                             <div>

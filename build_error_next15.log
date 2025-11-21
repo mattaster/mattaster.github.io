@@ -1,0 +1,21 @@
+
+> temp_app@0.1.0 build
+> next build
+
+   ▲ Next.js 15.5.6
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully in 1841ms
+   Skipping linting
+   Checking validity of types ...
+   Collecting page data ...
+Error: export const dynamic = "force-static"/export const revalidate not configured on route "/robots.txt" with "output: export". See more info here: https://nextjs.org/docs/advanced-features/static-html-export
+    at 9444 (C:\Users\matta\.gemini\antigravity\scratch\github_pages_mattaster\mattaster.github.io\.next\server\app\robots.txt\route.js:1:1975)
+    at c (C:\Users\matta\.gemini\antigravity\scratch\github_pages_mattaster\mattaster.github.io\.next\server\webpack-runtime.js:1:127)
+    at <unknown> (C:\Users\matta\.gemini\antigravity\scratch\github_pages_mattaster\mattaster.github.io\.next\server\app\robots.txt\route.js:16:240)
+    at c.X (C:\Users\matta\.gemini\antigravity\scratch\github_pages_mattaster\mattaster.github.io\.next\server\webpack-runtime.js:1:1191)
+    at <unknown> (C:\Users\matta\.gemini\antigravity\scratch\github_pages_mattaster\mattaster.github.io\.next\server\app\robots.txt\route.js:16:222)
+    at Object.<anonymous> (C:\Users\matta\.gemini\antigravity\scratch\github_pages_mattaster\mattaster.github.io\.next\server\app\robots.txt\route.js:16:271)
+
+> Build error occurred
+[Error: Failed to collect page data for /robots.txt] { type: 'Error' }

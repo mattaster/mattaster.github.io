@@ -35,9 +35,11 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         );
 
         if (href) {
+            // eslint-disable-next-line @typescript-eslint/no-unused-vars
             const { type, disabled, ...rest } = props;
             return (
-                <Link href={href} className={classes} {...rest as any}>
+                // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                <Link href={href} className={classes} {...(rest as any)}>
                     {props.children}
                 </Link>
             );

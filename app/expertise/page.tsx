@@ -81,7 +81,7 @@ export default function Expertise() {
                             Expertise & Services
                         </h1>
                         <p className="mt-6 text-lg leading-8 text-slate-300">
-                            Flexible engagement models tailored to your company's stage and needs.
+                            Flexible engagement models tailored to your company&apos;s stage and needs.
                         </p>
                     </div>
                 </div>

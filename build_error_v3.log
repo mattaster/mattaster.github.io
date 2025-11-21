@@ -1,0 +1,34 @@
+
+> temp_app@0.1.0 build
+> next build
+
+ ⚠ `eslint` configuration in next.config.mjs is no longer supported. See more info here: https://nextjs.org/docs/app/api-reference/cli/next#next-lint-options
+ ⚠ Invalid next.config.mjs options detected: 
+ ⚠     Unrecognized key(s) in object: 'eslint'
+ ⚠ See more info here: https://nextjs.org/docs/messages/invalid-next-config
+   ▲ Next.js 16.0.3 (Turbopack)
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully in 3.0s
+   Running TypeScript ...
+   Collecting page data using 15 workers ...
+Error: export const dynamic = "force-static"/export const revalidate not configured on route "/robots.txt" with "output: export". See more info here: https://nextjs.org/docs/advanced-features/static-html-export
+    at module evaluation (C:\Users\matta\.gemini\antigravity\scratch\github_pages_mattaster\mattaster.github.io\.next\server\chunks\[root-of-the-server]__708de4e4._.js:16:889)
+    at instantiateModule (C:\Users\matta\.gemini\antigravity\scratch\github_pages_mattaster\mattaster.github.io\.next\server\chunks\[turbopack]_runtime.js:715:9)
+    at instantiateRuntimeModule (C:\Users\matta\.gemini\antigravity\scratch\github_pages_mattaster\mattaster.github.io\.next\server\chunks\[turbopack]_runtime.js:743:12)
+    at getOrInstantiateRuntimeModule (C:\Users\matta\.gemini\antigravity\scratch\github_pages_mattaster\mattaster.github.io\.next\server\chunks\[turbopack]_runtime.js:756:12)
+    at Object.m (C:\Users\matta\.gemini\antigravity\scratch\github_pages_mattaster\mattaster.github.io\.next\server\chunks\[turbopack]_runtime.js:765:18)
+    at Object.<anonymous> (C:\Users\matta\.gemini\antigravity\scratch\github_pages_mattaster\mattaster.github.io\.next\server\app\robots.txt\route.js:5:3)
+Error: export const dynamic = "force-static"/export const revalidate not configured on route "/sitemap.xml" with "output: export". See more info here: https://nextjs.org/docs/advanced-features/static-html-export
+    at module evaluation (C:\Users\matta\.gemini\antigravity\scratch\github_pages_mattaster\mattaster.github.io\.next\server\chunks\[root-of-the-server]__dde07cd3._.js:16:1157)
+    at instantiateModule (C:\Users\matta\.gemini\antigravity\scratch\github_pages_mattaster\mattaster.github.io\.next\server\chunks\[turbopack]_runtime.js:715:9)
+    at instantiateRuntimeModule (C:\Users\matta\.gemini\antigravity\scratch\github_pages_mattaster\mattaster.github.io\.next\server\chunks\[turbopack]_runtime.js:743:12)
+    at getOrInstantiateRuntimeModule (C:\Users\matta\.gemini\antigravity\scratch\github_pages_mattaster\mattaster.github.io\.next\server\chunks\[turbopack]_runtime.js:756:12)
+    at Object.m (C:\Users\matta\.gemini\antigravity\scratch\github_pages_mattaster\mattaster.github.io\.next\server\chunks\[turbopack]_runtime.js:765:18)
+    at Object.<anonymous> (C:\Users\matta\.gemini\antigravity\scratch\github_pages_mattaster\mattaster.github.io\.next\server\app\sitemap.xml\route.js:5:3)
+
+> Build error occurred
+Error: Failed to collect page data for /robots.txt
+    at ignore-listed frames {
+  type: 'Error'
+}

@@ -18,7 +18,7 @@ export default function Contact() {
                             Get in Touch
                         </h1>
                         <p className="mt-6 text-lg leading-8 text-slate-600">
-                            Ready to elevate your marketing strategy? Let's discuss how I can help your business grow.
+                            Ready to elevate your marketing strategy? Let&apos;s discuss how I can help your business grow.
                         </p>
                     </div>
                 </div>
@@ -31,7 +31,7 @@ export default function Contact() {
                             Book a Discovery Call
                         </h3>
                         <p className="mt-4 text-base leading-7 text-slate-600">
-                            Schedule a free 30-minute consultation to discuss your current challenges and see if we're a good fit.
+                            Schedule a free 30-minute consultation to discuss your current challenges and see if we&apos;re a good fit.
                         </p>
                         <div className="mt-8">
                             <Button href="https://calendly.com/" size="lg" className="w-full sm:w-auto">
